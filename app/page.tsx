@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Loader2, Globe, Shuffle, Download, Sparkles, Brain } from "lucide-react"
 import { ThemeToggle } from "@/components/theme-toggle"
 
-type ScrambleType = "letters" | "words" | "sentences" | "links" | "images"
+type ScrambleType =  "sentences" | "links" 
 
 interface ScrambleResult {
   originalText: string
@@ -167,11 +167,11 @@ export default function WebScrambler() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="letters">🔤 Scramble Letters</SelectItem>
-                      <SelectItem value="words">📝 Scramble Words</SelectItem>
+                      {/* <SelectItem value="letters">🔤 Scramble Letters</SelectItem>
+                      <SelectItem value="words">📝 Scramble Words</SelectItem> */}
                       <SelectItem value="sentences">📄 Scramble Sentences</SelectItem>
                       <SelectItem value="links">🔗 Scramble Links</SelectItem>
-                      <SelectItem value="images">🖼️ Scramble Images</SelectItem>
+                      {/* <SelectItem value="images">🖼️ Scramble Images</SelectItem> */}
                     </SelectContent>
                   </Select>
                 </div>
@@ -261,7 +261,7 @@ export default function WebScrambler() {
 
                   <Card className="border-accent/20 shadow-lg bg-card/80 backdrop-blur-sm">
                     <CardHeader className="pb-4">
-                      <CardTitle className="font-heading text-lg text-foreground">Scrambled Text</CardTitle>
+                      <CardTitle className="font-heading text-lg text-foreground">Scramble</CardTitle>
                       <p className="text-sm text-accent font-medium">
                         Method: {result.scrambleType.charAt(0).toUpperCase() + result.scrambleType.slice(1)}
                       </p>
